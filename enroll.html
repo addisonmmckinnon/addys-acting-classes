@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll — Addy's Performing Arts Classes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="site-title" href="index.html">🎭 Addy's Performing Arts Classes</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="private-lessons.html">Private Lessons</a>
+        <a href="safety.html">Safety</a>
+        <a href="enroll.html">Enroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="enroll">
+      <h1>Enroll in a Class 🎟️</h1>
+      <p class="intro">
+        Fill this out and I'll get back to you about signing up!
+      </p>
+
+      <!--
+        Addy: this form sends to your phone as a text, via FormSubmit
+        (a free service, no account needed) forwarding to your AT&T
+        email-to-text address. The FIRST submission triggers a one-time
+        confirmation text with a link — tap it once to activate, then
+        every submission after that will text you automatically.
+      -->
+      <form action="https://formsubmit.co/9546292287@txt.att.net" method="POST">
+        <input type="hidden" name="_subject" value="New Class Enrollment!" />
+        <input type="hidden" name="_captcha" value="false" />
+        <div>
+          <label for="name">Student's Name</label><br />
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div>
+          <label for="age">Student's Age</label><br />
+          <input type="number" id="age" name="age" min="0" max="120" required />
+        </div>
+
+        <div>
+          <label for="allergies">Allergies (if any)</label><br />
+          <input type="text" id="allergies" name="allergies" placeholder="e.g. peanuts, none" />
+        </div>
+
+        <div>
+          <label for="parent">Parent/Guardian Name</label><br />
+          <input type="text" id="parent" name="parent" />
+        </div>
+
+        <div>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="class">Which class?</label><br />
+          <select id="class" name="class">
+            <option value="acting">🎭 Acting</option>
+            <option value="singing">🎤 Singing</option>
+            <option value="drama">🎬 Drama</option>
+            <option value="musical">🎶 Musical Theatre</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Anything else I should know?</label><br />
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Addy's Performing Arts Classes 🎭
+  </footer>
+
+</body>
+</html>
