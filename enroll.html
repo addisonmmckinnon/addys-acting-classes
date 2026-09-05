@@ -33,17 +33,13 @@
       </p>
 
       <!--
-        Addy: this form emails addisonmmckinnon@gmail.com via FormSubmit
-        (a free service, no account needed) — the AT&T text gateway wasn't
-        delivering reliably, so this sends to your real email instead. The
-        FIRST submission triggers a one-time confirmation email with a
-        link — tap it once to activate, then every submission after that
-        emails you automatically. Turn on notifications for Mail on your
-        phone if you want it to feel like a text.
+        Addy: this form doesn't use a third-party service anymore (both
+        FormSubmit and Web3Forms hit dead ends). Instead, clicking "Send"
+        opens the visitor's own email app with everything pre-filled,
+        addressed to addisonmmckinnon@gmail.com — they just hit send from
+        their side. See script.js for how this works.
       -->
-      <form action="https://formsubmit.co/addisonmmckinnon@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New Class Enrollment!" />
-        <input type="hidden" name="_captcha" value="false" />
+      <form id="enroll-form">
         <div>
           <label for="name">Student's Name</label><br />
           <input type="text" id="name" name="name" required />
@@ -93,5 +89,6 @@
     &copy; 2026 Addy's Performing Arts Classes 🎭
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
