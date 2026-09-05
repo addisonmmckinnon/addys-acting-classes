@@ -105,9 +105,10 @@ a {
 
 .divider {
   text-align: center;
-  font-size: 1.4rem;
-  padding: 20px 0;
-  letter-spacing: 8px;
+  padding: 24px 0;
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 6px;
 }
 
 /* ── CLASSES ── */
