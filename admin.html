@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="site-title" href="index.html">🎭 Addy's Performing Arts Classes</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!--
+      Addy: this page is NOT linked anywhere in the site's nav on purpose,
+      so people have to know the exact address (yoursite/admin.html) to
+      find it. Real login now (your Google email + the password you set),
+      backed by Firebase Authentication -- not just a text passcode -- so
+      it's actually secure, since this data includes kids' allergies and
+      parent emails.
+    -->
+    <section id="login-gate" class="password-gate">
+      <h1>Admin Login</h1>
+      <p>Sign in to see enrollments.</p>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" value="addisonmmckinnon@gmail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button class="btn btn-primary" type="submit">Sign In</button>
+        <p id="login-error" class="hidden form-error">
+          That didn't work — check your email and password and try again.
+        </p>
+      </form>
+    </section>
+
+    <section id="admin-content" class="hidden">
+      <h1>Enrollments</h1>
+      <p>
+        This list updates automatically every time someone enrolls on the
+        website — no need to add anything yourself.
+      </p>
+
+      <ul id="enrollment-list" class="job-list"></ul>
+      <p id="empty-state" class="empty-state hidden">No enrollments yet.</p>
+
+      <button id="logout-button" class="btn btn-secondary" style="margin-top: 24px;">
+        Sign Out
+      </button>
+    </section>
+
+  </main>
+
+  <footer>
+    Private page — only visible to Addy
+  </footer>
+
+  <script type="module" src="admin-firebase.js"></script>
+</body>
+</html>

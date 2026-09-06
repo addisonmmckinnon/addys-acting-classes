@@ -30,7 +30,7 @@
       <h1>Enroll in a Class</h1>
       <p class="intro">
         Fill this out and I will get back to you about signing up.
-        Classes are for ages 10 and up.
+        Classes are for ages 2½ to 10.
       </p>
 
       <!--
@@ -38,7 +38,9 @@
         FormSubmit and Web3Forms hit dead ends). Instead, clicking "Send"
         opens the visitor's own email app with everything pre-filled,
         addressed to addisonmmckinnon@gmail.com — they just hit send from
-        their side. See script.js for how this works.
+        their side. It also saves the enrollment to a real database now,
+        so it shows up automatically on the admin page. See
+        enroll-firebase.js for how this works.
       -->
       <form id="enroll-form">
         <div>
@@ -48,7 +50,7 @@
 
         <div>
           <label for="age">Student's Age</label><br />
-          <input type="number" id="age" name="age" min="10" max="120" required />
+          <input type="number" id="age" name="age" min="2.5" max="10" step="0.5" required />
         </div>
 
         <div>
@@ -90,6 +92,6 @@
     &copy; 2026 Addy's Performing Arts Classes
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="enroll-firebase.js"></script>
 </body>
 </html>
